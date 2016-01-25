@@ -7,8 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0002EE1C403FC700536C62 /* Xling.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E0002ED1C403FC700536C62 /* Xling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E0002F41C404D2F00536C62 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0002F31C404D2F00536C62 /* Algorithms.swift */; };
+		2E2E98DB1C479EA200536C62 /* Xling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E98DA1C479EA200536C62 /* Xling.swift */; };
+		2E2E98DC1C47A03000536C62 /* Xling.h in Sources */ = {isa = PBXBuildFile; fileRef = 2E0002ED1C403FC700536C62 /* Xling.h */; };
+		2E2E98DD1C47A03000536C62 /* Xling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E98DA1C479EA200536C62 /* Xling.swift */; };
+		2E2E98DE1C47A03000536C62 /* HMMTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEEDE81C40383200536C62 /* HMMTagger.swift */; };
+		2E2E98DF1C47A03000536C62 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0002F31C404D2F00536C62 /* Algorithms.swift */; };
+		2E2E98E01C47A03000536C62 /* Ngram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B11C47365A00536C62 /* Ngram.swift */; };
+		2E2E98E11C47A03000536C62 /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B71C47394700536C62 /* FileParser.swift */; };
+		2E2E98E21C47A03000536C62 /* WordSegmenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B51C47388500536C62 /* WordSegmenter.swift */; };
+		2E2E98E31C47A03000536C62 /* Defs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B31C4737D500536C62 /* Defs.swift */; };
 		2EDEEDE21C40378600536C62 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEEDE11C40378600536C62 /* main.swift */; };
+		2EEAC0B21C47365A00536C62 /* Ngram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B11C47365A00536C62 /* Ngram.swift */; };
+		2EEAC0B41C4737D500536C62 /* Defs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B31C4737D500536C62 /* Defs.swift */; };
+		2EEAC0B61C47388500536C62 /* WordSegmenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B51C47388500536C62 /* WordSegmenter.swift */; };
+		2EEAC0B81C47394700536C62 /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B71C47394700536C62 /* FileParser.swift */; };
+		2EEAC0B91C474D3700536C62 /* HMMTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEEDE81C40383200536C62 /* HMMTagger.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E2E98D71C479BDC00536C62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EDEEDD61C40378600536C62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E0002EA1C403FC700536C62;
+			remoteInfo = Xling;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2EDEEDDC1C40378600536C62 /* CopyFiles */ = {
@@ -23,11 +49,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2EDEEDDE1C40378600536C62 /* Xling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Xling; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E0002EB1C403FC700536C62 /* Xling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Xling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E0002ED1C403FC700536C62 /* Xling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xling.h; sourceTree = "<group>"; };
+		2E0002EF1C403FC700536C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E0002F31C404D2F00536C62 /* Algorithms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
+		2E2E98DA1C479EA200536C62 /* Xling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xling.swift; sourceTree = "<group>"; };
+		2EDEEDDE1C40378600536C62 /* XlingDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XlingDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDEEDE11C40378600536C62 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2EDEEDE81C40383200536C62 /* HMMTagger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMMTagger.swift; sourceTree = "<group>"; };
+		2EEAC0B11C47365A00536C62 /* Ngram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ngram.swift; sourceTree = "<group>"; };
+		2EEAC0B31C4737D500536C62 /* Defs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defs.swift; sourceTree = "<group>"; };
+		2EEAC0B51C47388500536C62 /* WordSegmenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSegmenter.swift; sourceTree = "<group>"; };
+		2EEAC0B71C47394700536C62 /* FileParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2E0002E71C403FC700536C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2EDEEDDB1C40378600536C62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +81,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0002EC1C403FC700536C62 /* Xling */ = {
+			isa = PBXGroup;
+			children = (
+				2E0002ED1C403FC700536C62 /* Xling.h */,
+				2E2E98DA1C479EA200536C62 /* Xling.swift */,
+				2EDEEDE81C40383200536C62 /* HMMTagger.swift */,
+				2E0002F31C404D2F00536C62 /* Algorithms.swift */,
+				2EEAC0B11C47365A00536C62 /* Ngram.swift */,
+				2EEAC0B71C47394700536C62 /* FileParser.swift */,
+				2EEAC0B51C47388500536C62 /* WordSegmenter.swift */,
+				2EEAC0B31C4737D500536C62 /* Defs.swift */,
+				2E0002EF1C403FC700536C62 /* Info.plist */,
+			);
+			path = Xling;
+			sourceTree = "<group>";
+		};
 		2EDEEDD51C40378600536C62 = {
 			isa = PBXGroup;
 			children = (
-				2EDEEDE01C40378600536C62 /* Xling */,
+				2EDEEDE01C40378600536C62 /* XlingDemo */,
+				2E0002EC1C403FC700536C62 /* Xling */,
 				2EDEEDDF1C40378600536C62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +109,56 @@
 		2EDEEDDF1C40378600536C62 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EDEEDDE1C40378600536C62 /* Xling */,
+				2EDEEDDE1C40378600536C62 /* XlingDemo */,
+				2E0002EB1C403FC700536C62 /* Xling.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2EDEEDE01C40378600536C62 /* Xling */ = {
+		2EDEEDE01C40378600536C62 /* XlingDemo */ = {
 			isa = PBXGroup;
 			children = (
 				2EDEEDE11C40378600536C62 /* main.swift */,
 			);
+			name = XlingDemo;
 			path = Xling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2E0002E81C403FC700536C62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0002EE1C403FC700536C62 /* Xling.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		2EDEEDDD1C40378600536C62 /* Xling */ = {
+		2E0002EA1C403FC700536C62 /* Xling */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EDEEDE51C40378600536C62 /* Build configuration list for PBXNativeTarget "Xling" */;
+			buildConfigurationList = 2E0002F01C403FC700536C62 /* Build configuration list for PBXNativeTarget "Xling" */;
+			buildPhases = (
+				2E0002E61C403FC700536C62 /* Sources */,
+				2E0002E71C403FC700536C62 /* Frameworks */,
+				2E0002E81C403FC700536C62 /* Headers */,
+				2E0002E91C403FC700536C62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Xling;
+			productName = Xling;
+			productReference = 2E0002EB1C403FC700536C62 /* Xling.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2EDEEDDD1C40378600536C62 /* XlingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EDEEDE51C40378600536C62 /* Build configuration list for PBXNativeTarget "XlingDemo" */;
 			buildPhases = (
 				2EDEEDDA1C40378600536C62 /* Sources */,
 				2EDEEDDB1C40378600536C62 /* Frameworks */,
@@ -76,10 +167,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				2E2E98D81C479BDC00536C62 /* PBXTargetDependency */,
 			);
-			name = Xling;
+			name = XlingDemo;
 			productName = Xling;
-			productReference = 2EDEEDDE1C40378600536C62 /* Xling */;
+			productReference = 2EDEEDDE1C40378600536C62 /* XlingDemo */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -92,6 +184,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = xinranmsn;
 				TargetAttributes = {
+					2E0002EA1C403FC700536C62 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					2EDEEDDD1C40378600536C62 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -109,23 +204,109 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2EDEEDDD1C40378600536C62 /* Xling */,
+				2EDEEDDD1C40378600536C62 /* XlingDemo */,
+				2E0002EA1C403FC700536C62 /* Xling */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2E0002E91C403FC700536C62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		2E0002E61C403FC700536C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2E98DB1C479EA200536C62 /* Xling.swift in Sources */,
+				2EEAC0B91C474D3700536C62 /* HMMTagger.swift in Sources */,
+				2EEAC0B61C47388500536C62 /* WordSegmenter.swift in Sources */,
+				2EEAC0B81C47394700536C62 /* FileParser.swift in Sources */,
+				2EEAC0B41C4737D500536C62 /* Defs.swift in Sources */,
+				2E0002F41C404D2F00536C62 /* Algorithms.swift in Sources */,
+				2EEAC0B21C47365A00536C62 /* Ngram.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2EDEEDDA1C40378600536C62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2E98DC1C47A03000536C62 /* Xling.h in Sources */,
+				2E2E98DD1C47A03000536C62 /* Xling.swift in Sources */,
+				2E2E98DE1C47A03000536C62 /* HMMTagger.swift in Sources */,
+				2E2E98DF1C47A03000536C62 /* Algorithms.swift in Sources */,
+				2E2E98E01C47A03000536C62 /* Ngram.swift in Sources */,
+				2E2E98E11C47A03000536C62 /* FileParser.swift in Sources */,
+				2E2E98E21C47A03000536C62 /* WordSegmenter.swift in Sources */,
+				2E2E98E31C47A03000536C62 /* Defs.swift in Sources */,
 				2EDEEDE21C40378600536C62 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2E2E98D81C479BDC00536C62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E0002EA1C403FC700536C62 /* Xling */;
+			targetProxy = 2E2E98D71C479BDC00536C62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2E0002F11C403FC700536C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Xling/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinranmsn.Xling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2E0002F21C403FC700536C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Xling/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinranmsn.Xling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2EDEEDE31C40378600536C62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -223,6 +404,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2E0002F01C403FC700536C62 /* Build configuration list for PBXNativeTarget "Xling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E0002F11C403FC700536C62 /* Debug */,
+				2E0002F21C403FC700536C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2EDEEDD91C40378600536C62 /* Build configuration list for PBXProject "Xling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -232,13 +422,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EDEEDE51C40378600536C62 /* Build configuration list for PBXNativeTarget "Xling" */ = {
+		2EDEEDE51C40378600536C62 /* Build configuration list for PBXNativeTarget "XlingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EDEEDE61C40378600536C62 /* Debug */,
 				2EDEEDE71C40378600536C62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
