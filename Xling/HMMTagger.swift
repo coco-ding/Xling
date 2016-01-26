@@ -193,7 +193,7 @@ extension HMMTagger {
                 let vitTags = Algorithms.viterbi(sen, states: states, initial: initial, transition: transition, emission: emission)
                 var senString = ""
                 for (i, word) in sen.enumerate() {
-                    senString += word + "_" + vitTags[i] + " "
+                    senString += word + "_" + vitTags.1[i] + " "
                 }
                 print(senString)
             }

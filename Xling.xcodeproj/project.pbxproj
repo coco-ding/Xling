@@ -18,6 +18,8 @@
 		2E2E98E11C47A03000536C62 /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B71C47394700536C62 /* FileParser.swift */; };
 		2E2E98E21C47A03000536C62 /* WordSegmenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B51C47388500536C62 /* WordSegmenter.swift */; };
 		2E2E98E31C47A03000536C62 /* Defs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B31C4737D500536C62 /* Defs.swift */; };
+		2EC4F9011C56ED6F00536C62 /* HiddenMarkovModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */; };
+		2EC4F9021C56EE6000536C62 /* HiddenMarkovModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */; };
 		2EDEEDE21C40378600536C62 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEEDE11C40378600536C62 /* main.swift */; };
 		2EEAC0B21C47365A00536C62 /* Ngram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B11C47365A00536C62 /* Ngram.swift */; };
 		2EEAC0B41C4737D500536C62 /* Defs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B31C4737D500536C62 /* Defs.swift */; };
@@ -54,6 +56,7 @@
 		2E0002EF1C403FC700536C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E0002F31C404D2F00536C62 /* Algorithms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
 		2E2E98DA1C479EA200536C62 /* Xling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xling.swift; sourceTree = "<group>"; };
+		2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenMarkovModel.swift; sourceTree = "<group>"; };
 		2EDEEDDE1C40378600536C62 /* XlingDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XlingDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDEEDE11C40378600536C62 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2EDEEDE81C40383200536C62 /* HMMTagger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMMTagger.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 				2EDEEDE81C40383200536C62 /* HMMTagger.swift */,
 				2E0002F31C404D2F00536C62 /* Algorithms.swift */,
 				2EEAC0B11C47365A00536C62 /* Ngram.swift */,
+				2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */,
 				2EEAC0B71C47394700536C62 /* FileParser.swift */,
 				2EEAC0B51C47388500536C62 /* WordSegmenter.swift */,
 				2EEAC0B31C4737D500536C62 /* Defs.swift */,
@@ -232,6 +236,7 @@
 				2EEAC0B41C4737D500536C62 /* Defs.swift in Sources */,
 				2E0002F41C404D2F00536C62 /* Algorithms.swift in Sources */,
 				2EEAC0B21C47365A00536C62 /* Ngram.swift in Sources */,
+				2EC4F9011C56ED6F00536C62 /* HiddenMarkovModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC4F9021C56EE6000536C62 /* HiddenMarkovModel.swift in Sources */,
 				2E2E98DC1C47A03000536C62 /* Xling.h in Sources */,
 				2E2E98DD1C47A03000536C62 /* Xling.swift in Sources */,
 				2E2E98DE1C47A03000536C62 /* HMMTagger.swift in Sources */,

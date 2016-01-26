@@ -9,14 +9,19 @@
 import Cocoa
 
 public class Algorithms {
-//    public static func viterbi<StateType: Hashable, ObservationType: Hashable>(observedSequence: [ObservationType], states: Set<StateType>, initial: [StateType: Float], transition: [StateType: [StateType: Float]], emission: [StateType: [ObservationType: Float]]) -> (Float, [StateType])
-    public static func viterbi(observedSequence: [String], states: Set<String>, initial: [String: Float], transition: [String: [String: Float]], emission: [String: [String: Float]]) -> [String]
-    {
-        typealias StateType = String
+    /**
+     * Viterbi Algorithm - Finding the most likely sequence of states
+     * @param observationSequence obs - observation sequence
+     * @param hmm - hidden Markov model
+     * @return (probability, sequence)
+     */
+    public static func viterbi<StateType: Hashable, ObservationType: Hashable>(observationSequence obs: [ObservationType], hmm: HiddenMarkovModel<StateType, ObservationType>) -> (Float, [StateType]) {
+        // FIXME: refactored HMM
+        /*
         typealias CellType = [StateType: Float]
         typealias PathType = [StateType: [StateType]]
         
-        var trellis = [[String: Float]()]
+        var trellis = [[StateType: Float]()]
         var path = PathType()
         
         for y in states {
@@ -53,5 +58,8 @@ public class Algorithms {
         }
         
         return path[bestArg]!
+        */
+        return (0.0, [])
     }
 }
+
