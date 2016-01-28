@@ -8,10 +8,9 @@
 
 import Foundation
 
-let tagger = HMMTagger(training: "train.txt")
-tagger.test("test.txt", outFile: "out.txt")
+//let tagger = HMMTagger(training: "train.txt")
+//tagger.test("test.txt", outFile: "out.txt")
 
-/*
 let states = Set(["Healthy", "Fever"])
 
 let observations = ["normal", "cold", "dizzy"]
@@ -28,6 +27,6 @@ let emission_probability: [String: [String: Float]] = [
     "Fever" : ["normal": 0.1, "cold": 0.3, "dizzy": 0.6]
 ]
 
-let result = Algorithms.viterbi(observations, states: states, initial: start_probability, transition: transition_probability, emission: emission_probability)
+let hmm: HiddenMarkovModel<String, String> = HiddenMarkovModel(states: states, observations: Set(observations), initial: start_probability, transition: transition_probability, emission: emission_probability)
+let result = Algorithms.viterbi(observationSequence: observations, hmm: hmm)
 print(result)
-*/
