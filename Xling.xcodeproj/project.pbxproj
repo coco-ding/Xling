@@ -10,7 +10,6 @@
 		2E0002EE1C403FC700536C62 /* Xling.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E0002ED1C403FC700536C62 /* Xling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E0002F41C404D2F00536C62 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0002F31C404D2F00536C62 /* Algorithms.swift */; };
 		2E2E98DB1C479EA200536C62 /* Xling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E98DA1C479EA200536C62 /* Xling.swift */; };
-		2E2E98DC1C47A03000536C62 /* Xling.h in Sources */ = {isa = PBXBuildFile; fileRef = 2E0002ED1C403FC700536C62 /* Xling.h */; };
 		2E2E98DD1C47A03000536C62 /* Xling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E98DA1C479EA200536C62 /* Xling.swift */; };
 		2E2E98DE1C47A03000536C62 /* HMMTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEEDE81C40383200536C62 /* HMMTagger.swift */; };
 		2E2E98DF1C47A03000536C62 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0002F31C404D2F00536C62 /* Algorithms.swift */; };
@@ -283,7 +282,6 @@
 			files = (
 				2EE8412A1C59EA0800536C62 /* MaxEntropyMarkovModel.swift in Sources */,
 				2EC4F9021C56EE6000536C62 /* HiddenMarkovModel.swift in Sources */,
-				2E2E98DC1C47A03000536C62 /* Xling.h in Sources */,
 				2E2E98DD1C47A03000536C62 /* Xling.swift in Sources */,
 				2E2E98DE1C47A03000536C62 /* HMMTagger.swift in Sources */,
 				2E2E98DF1C47A03000536C62 /* Algorithms.swift in Sources */,
