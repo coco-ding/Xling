@@ -21,6 +21,8 @@
 		2EC4F9011C56ED6F00536C62 /* HiddenMarkovModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */; };
 		2EC4F9021C56EE6000536C62 /* HiddenMarkovModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */; };
 		2EDEEDE21C40378600536C62 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEEDE11C40378600536C62 /* main.swift */; };
+		2EE8412A1C59EA0800536C62 /* MaxEntropyMarkovModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE841291C59EA0800536C62 /* MaxEntropyMarkovModel.swift */; };
+		2EE8412B1C59EA0800536C62 /* MaxEntropyMarkovModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE841291C59EA0800536C62 /* MaxEntropyMarkovModel.swift */; };
 		2EEAC0B21C47365A00536C62 /* Ngram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B11C47365A00536C62 /* Ngram.swift */; };
 		2EEAC0B41C4737D500536C62 /* Defs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B31C4737D500536C62 /* Defs.swift */; };
 		2EEAC0B61C47388500536C62 /* WordSegmenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC0B51C47388500536C62 /* WordSegmenter.swift */; };
@@ -60,6 +62,7 @@
 		2EDEEDDE1C40378600536C62 /* XlingDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XlingDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDEEDE11C40378600536C62 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2EDEEDE81C40383200536C62 /* HMMTagger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMMTagger.swift; sourceTree = "<group>"; };
+		2EE841291C59EA0800536C62 /* MaxEntropyMarkovModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxEntropyMarkovModel.swift; sourceTree = "<group>"; };
 		2EEAC0B11C47365A00536C62 /* Ngram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ngram.swift; sourceTree = "<group>"; };
 		2EEAC0B31C4737D500536C62 /* Defs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defs.swift; sourceTree = "<group>"; };
 		2EEAC0B51C47388500536C62 /* WordSegmenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSegmenter.swift; sourceTree = "<group>"; };
@@ -89,12 +92,10 @@
 			children = (
 				2E0002ED1C403FC700536C62 /* Xling.h */,
 				2E2E98DA1C479EA200536C62 /* Xling.swift */,
-				2EDEEDE81C40383200536C62 /* HMMTagger.swift */,
-				2E0002F31C404D2F00536C62 /* Algorithms.swift */,
-				2EEAC0B11C47365A00536C62 /* Ngram.swift */,
-				2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */,
-				2EEAC0B71C47394700536C62 /* FileParser.swift */,
-				2EEAC0B51C47388500536C62 /* WordSegmenter.swift */,
+				2EE841261C59E9D500536C62 /* Tagging */,
+				2EE841271C59E9DC00536C62 /* Algorithms */,
+				2EE841251C59E9B800536C62 /* LanguageModels */,
+				2EE841281C59E9EC00536C62 /* Parsing */,
 				2EEAC0B31C4737D500536C62 /* Defs.swift */,
 				2E0002EF1C403FC700536C62 /* Info.plist */,
 			);
@@ -126,6 +127,41 @@
 			);
 			name = XlingDemo;
 			path = Xling;
+			sourceTree = "<group>";
+		};
+		2EE841251C59E9B800536C62 /* LanguageModels */ = {
+			isa = PBXGroup;
+			children = (
+				2EEAC0B11C47365A00536C62 /* Ngram.swift */,
+				2EC4F9001C56ED6F00536C62 /* HiddenMarkovModel.swift */,
+				2EE841291C59EA0800536C62 /* MaxEntropyMarkovModel.swift */,
+			);
+			name = LanguageModels;
+			sourceTree = "<group>";
+		};
+		2EE841261C59E9D500536C62 /* Tagging */ = {
+			isa = PBXGroup;
+			children = (
+				2EDEEDE81C40383200536C62 /* HMMTagger.swift */,
+			);
+			name = Tagging;
+			sourceTree = "<group>";
+		};
+		2EE841271C59E9DC00536C62 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				2E0002F31C404D2F00536C62 /* Algorithms.swift */,
+			);
+			name = Algorithms;
+			sourceTree = "<group>";
+		};
+		2EE841281C59E9EC00536C62 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				2EEAC0B71C47394700536C62 /* FileParser.swift */,
+				2EEAC0B51C47388500536C62 /* WordSegmenter.swift */,
+			);
+			name = Parsing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2E98DB1C479EA200536C62 /* Xling.swift in Sources */,
+				2EE8412B1C59EA0800536C62 /* MaxEntropyMarkovModel.swift in Sources */,
 				2EEAC0B91C474D3700536C62 /* HMMTagger.swift in Sources */,
 				2EEAC0B61C47388500536C62 /* WordSegmenter.swift in Sources */,
 				2EEAC0B81C47394700536C62 /* FileParser.swift in Sources */,
@@ -244,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE8412A1C59EA0800536C62 /* MaxEntropyMarkovModel.swift in Sources */,
 				2EC4F9021C56EE6000536C62 /* HiddenMarkovModel.swift in Sources */,
 				2E2E98DC1C47A03000536C62 /* Xling.h in Sources */,
 				2E2E98DD1C47A03000536C62 /* Xling.swift in Sources */,

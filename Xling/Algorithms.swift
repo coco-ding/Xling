@@ -9,6 +9,13 @@
 import Cocoa
 
 public class Algorithms {
+    // Uninitializable
+    init?() {
+        return nil
+    }
+}
+
+extension Algorithms {
     /**
      * Viterbi Algorithm - Finding the most likely sequence of states
      * @param observationSequence obs - observation sequence
@@ -16,50 +23,48 @@ public class Algorithms {
      * @return (probability, sequence)
      */
     public static func viterbi<StateType: Hashable, ObservationType: Hashable>(observationSequence obs: [ObservationType], hmm: HiddenMarkovModel<StateType, ObservationType>) -> (Float, [StateType]) {
-        // FIXME: refactored HMM
-        /*
         typealias CellType = [StateType: Float]
         typealias PathType = [StateType: [StateType]]
         
         var trellis = [[StateType: Float]()]
         var path = PathType()
         
-        for y in states {
-            trellis[0][y] = -logf(initial[y]!) - logf(emission[y]![observedSequence[0]]!)
+        for y in hmm.states {
+            trellis[0][y] = -logf(hmm.initial[y]!) - logf(hmm.emission[y]![obs[0]]!)
             path[y] = [y]
         }
-        for i in 1..<observedSequence.count {
+        for i in 1..<obs.count {
             trellis.append(CellType())
             var newPath = PathType()
-            for y in states {
-                var bestArg: String = "" // state
+            for y in hmm.states {
+                var bestArg: StateType? // state
                 var bestProb: Float = FLT_MAX // log prob
-                for y0 in states {
-                    let prob = trellis[i-1][y0]! - logf(transition[y0]![y]!) - logf(emission[y]![observedSequence[i]]!)
+                for y0 in hmm.states {
+                    let prob = trellis[i-1][y0]! - logf(hmm.transition[y0]![y]!) - logf(hmm.emission[y]![obs[i]]!)
                     if prob < bestProb {
                         bestArg = y0
                         bestProb = prob
                     }
                 }
-                trellis[i][y] = bestProb
-                newPath[y] = path[bestArg]! + [y]
+                if let _ = bestArg {
+                    trellis[i][y] = bestProb
+                    newPath[y] = path[bestArg!]! + [y]
+                }
             }
             path = newPath
         }
         
-        let n = observedSequence.count - 1
-        var bestArg: StateType = ""
+        let n = obs.count - 1
+        var bestArg: StateType?
         var bestProb: Float = FLT_MAX
-        for y in states {
+        for y in hmm.states {
             if trellis[n][y] < bestProb {
                 bestProb = trellis[n][y]!
                 bestArg = y
             }
         }
         
-        return path[bestArg]!
-        */
-        return (0.0, [])
+        return (bestProb, path[bestArg!]!)
     }
 }
 

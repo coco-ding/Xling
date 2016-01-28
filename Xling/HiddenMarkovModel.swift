@@ -8,16 +8,28 @@
 
 import Foundation
 
-public class HiddenMarkovModel<StateType: Hashable, ObservationType: Hashable>
-{
-    private(set) var states: Set<StateType>
-    private(set) var observations: Set<ObservationType>
-    private(set) var transition: [StateType: [StateType: Float]]
-    private(set) var emission: [StateType: [ObservationType: Float]]
-    private(set) var initial: [ObservationType: Float]
+public struct HiddenMarkovModel<StateType: Hashable, ObservationType: Hashable> {
+    public var states: Set<StateType>
+    public var observations: Set<ObservationType>
+    public var transition: [StateType: [StateType: Float]]
+    public var emission: [StateType: [ObservationType: Float]]
+    public var initial: [StateType: Float]
     
-    init (states: Set<StateType>, observations: [ObservationType], initial: [StateType: Float], transition: [StateType: [StateType: Float]], emission: [StateType: [ObservationType: Float]]) {
+    init() {
+        states = Set<StateType>()
+        observations = Set<ObservationType>()
+        transition = [StateType: [StateType: Float]]()
+        emission = [StateType: [ObservationType: Float]]()
+        initial = [StateType: Float]()
+    }
+    
+    init(states: Set<StateType>, observations: Set<ObservationType>, initial: [StateType: Float], transition: [StateType: [StateType: Float]], emission: [StateType: [ObservationType: Float]]) {
         // TODO
+        self.states = states
+        self.observations = observations
+        self.transition = transition
+        self.emission = emission
+        self.initial = initial
     }
     
     

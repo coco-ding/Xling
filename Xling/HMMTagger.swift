@@ -24,30 +24,17 @@ public class HMMTagger {
     private var laplace: Float = 0.0
     private var minFreq: Int = 0
     
-    private var states = Set<String>() // States
-    private var observations = Set<String>() // Observations
-    private var transition = [String: [String: Float]]()
-    private var emission = [String: [String: Float]]()
-    private var initial = [String: Float]()
-    
-//    private var trainingFile: String
-//    private var testingFile: String
-    
-// In Algorithms.swift
-//    static func viterbi(observedSequence: [String], states: Set<String>,
+    private var hmm: HiddenMarkovModel<String, String>
     
     public init(training: String, smoothing laplace: Float = 1.0, unknownWordThreshold minFreq: Int = 5) {
         self.laplace = laplace
         self.minFreq = minFreq
+        hmm = HiddenMarkovModel()
         train(training)
     }
     
     public init(states: Set<String>, observations: Set<String>, transition: [String: [String: Float]], emission: [String: [String: Float]], initial: [String: Float]) {
-        self.states = states
-        self.observations = observations
-        self.transition = transition
-        self.emission = emission
-        self.initial = initial
+        hmm = HiddenMarkovModel(states: states, observations: observations, initial: initial, transition: transition, emission: emission)
     }
 }
 
@@ -87,7 +74,7 @@ extension HMMTagger {
     
     private func preprocessUnlabeledCorpus(inout corpus: [[String]]) {
         for (i, sen) in corpus.enumerate() {
-            for (j, word) in sen.enumerate() where !self.observations.contains(word) {
+            for (j, word) in sen.enumerate() where !hmm.observations.contains(word) {
                 corpus[i][j] = UNK
             }
         }
@@ -103,20 +90,20 @@ extension HMMTagger {
             
             for sen in corpus {
                 for token in sen {
-                    states.insert(token.tag)
-                    observations.insert(token.word)
+                    hmm.states.insert(token.tag)
+                    hmm.observations.insert(token.word)
                 }
             }
             
             // calculate initial probabilities
             print("Computing initial probabilities...")
-            let smoothedSenCount = Float(corpus.count) + Float(states.count) * laplace
+            let smoothedSenCount = Float(corpus.count) + Float(hmm.states.count) * laplace
             for sen in corpus {
                 let first = sen[0]
-                initial[first.tag] = (initial[first.tag] ?? laplace) + 1.0
+                hmm.initial[first.tag] = (hmm.initial[first.tag] ?? laplace) + 1.0
             }
-            for (k, v) in initial {
-                initial[k] = v / smoothedSenCount
+            for (k, v) in hmm.initial {
+                hmm.initial[k] = v / smoothedSenCount
             }
             
             // transition probabilities
@@ -125,42 +112,42 @@ extension HMMTagger {
             for sen in corpus {
                 for i in 0 ..< sen.count-1 {
                     let state = sen[i].tag, tostate = sen[i+1].tag
-                    guard let _ = transition[state] else {
-                        transition[state] = [String: Float]()
+                    guard let _ = hmm.transition[state] else {
+                        hmm.transition[state] = [String: Float]()
                         break
                     }
-                    transition[state]![tostate] = (transition[state]![tostate] ?? laplace) + 1.0
-                    transCount[state] = (transCount[state] ?? laplace * Float(states.count)) + 1.0
+                    hmm.transition[state]![tostate] = (hmm.transition[state]![tostate] ?? laplace) + 1.0
+                    transCount[state] = (transCount[state] ?? laplace * Float(hmm.states.count)) + 1.0
                 }
             }
-            for (state, toDict) in transition {
+            for (state, toDict) in hmm.transition {
                 for (toState, count) in toDict {
-                    transition[state]![toState] = count / transCount[state]!
+                    hmm.transition[state]![toState] = count / transCount[state]!
                 }
             }
             
             print("Computing emission probabilities...")
-            for tag in states {
-                emission[tag] = [String: Float]()
+            for tag in hmm.states {
+                hmm.emission[tag] = [String: Float]()
             }
             // avoid zerop
-            for word in observations {
-                for tag in states {
-                    emission[tag]![word] = laplace
+            for word in hmm.observations {
+                for tag in hmm.states {
+                    hmm.emission[tag]![word] = laplace
                 }
             }
             for sen in corpus {
                 for token in sen {
                     let word = token.word, tag = token.tag
-                    emission[tag]![word]! += 1.0
+                    hmm.emission[tag]![word]! += 1.0
                 }
             }
-            let smoothedComplement = laplace * Float(observations.count)
-            for (tag, wordMap) in emission {
+            let smoothedComplement = laplace * Float(hmm.observations.count)
+            for (tag, wordMap) in hmm.emission {
                 // compute prob
                 let emitCount = Float(wordMap.count) + smoothedComplement
                 for (word, count) in wordMap {
-                    emission[tag]![word] = count / emitCount
+                    hmm.emission[tag]![word] = count / emitCount
                 }
             }
         }
@@ -190,7 +177,7 @@ extension HMMTagger {
             }
             
             for sen in corpus {
-                let vitTags = Algorithms.viterbi(sen, states: states, initial: initial, transition: transition, emission: emission)
+                let vitTags = Algorithms.viterbi(observationSequence: sen as [String], hmm: hmm)
                 var senString = ""
                 for (i, word) in sen.enumerate() {
                     senString += word + "_" + vitTags.1[i] + " "
